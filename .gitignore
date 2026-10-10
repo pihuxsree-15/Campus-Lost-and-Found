@@ -1,0 +1,18 @@
+
+# Frontend dependencies and build files
+frontend/lost-found-frontend/node_modules/
+frontend/lost-found-frontend/dist/
+
+# Backend build files
+backend/lostfound/target/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# IDE and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

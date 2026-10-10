@@ -1,0 +1,275 @@
+
+
+.my-reports-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+  box-sizing: border-box;
+  color: #493568;
+}
+
+.my-reports-heading {
+  color: #7854b8;
+  margin-bottom: 24px;
+  font-weight: 750;
+}
+
+.my-reports-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.my-report-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 26px;
+  border-radius: 24px;
+  background: linear-gradient(
+    145deg,
+    #fbf8ff 0%,
+    #f1eaff 52%,
+    #fff7fd 100%
+  );
+  border: 1px solid #e6dafa;
+  box-shadow: 0 8px 28px rgba(119, 84, 168, 0.12);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.my-report-card:hover {
+  box-shadow: 0 12px 32px rgba(119, 84, 168, 0.17);
+  transform: translateY(-2px);
+}
+
+.my-report-item {
+  width: 100%;
+  min-width: 0;
+}
+
+.my-report-item > * {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.my-report-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.my-report-card button,
+.my-report-edit-form button {
+  padding: 11px 18px;
+  border: 1px solid #e2d3fa;
+  border-radius: 14px;
+  background: #eee5ff;
+  color: #6846a5;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.my-report-card button:hover,
+.my-report-edit-form button:hover {
+  background: #e3d3ff;
+  transform: translateY(-1px);
+}
+
+.my-report-card .my-report-delete-button {
+  background: #fff0f4;
+  color: #bd5277;
+  border-color: #f7d5e1;
+}
+
+.my-report-card .my-report-delete-button:hover {
+  background: #ffe2ec;
+}
+
+.my-report-card .my-report-claims-button,
+.my-report-card .my-report-return-button {
+  background: #e7f7f0;
+  color: #278265;
+  border-color: #c8ebdc;
+}
+
+.my-report-card .my-report-claims-button:hover,
+.my-report-card .my-report-return-button:hover {
+  background: #d8f1e6;
+}
+
+.my-report-qr {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding-top: 18px;
+  border-top: 1px solid #e8def8;
+}
+
+.my-report-qr h3,
+.my-report-claims h3 {
+  margin: 0;
+  color: #7854b8;
+}
+
+.my-report-qr-box {
+  padding: 12px;
+  background: #ffffff;
+  border: 1px solid #e9dfff;
+  border-radius: 18px;
+  box-shadow: 0 4px 14px rgba(119, 84, 168, 0.1);
+}
+
+.my-report-qr-box canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.my-report-card .my-report-download-button {
+  color: #ffffff;
+  border: none;
+  background: linear-gradient(135deg, #aa83f1, #8256ce);
+}
+
+.my-report-card .my-report-download-button:hover {
+  background: linear-gradient(135deg, #9b70e8, #7145bd);
+}
+
+.my-report-claims {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 20px;
+  border-top: 1px solid #e8def8;
+}
+
+.my-report-claim-card {
+  padding: 18px;
+  border: 1px solid #e9def8;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.7);
+  overflow-wrap: anywhere;
+}
+
+.my-report-claim-card p {
+  color: #65537e;
+  line-height: 1.65;
+}
+
+.my-report-claim-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.my-report-edit-form {
+  padding: 24px;
+  margin-bottom: 24px;
+  border: 1px solid #e4d6f8;
+  border-radius: 22px;
+  background: linear-gradient(145deg, #fbf8ff, #f1eaff);
+  box-shadow: 0 8px 24px rgba(119, 84, 168, 0.1);
+}
+
+.my-report-edit-form h2 {
+  color: #7854b8;
+  margin-top: 0;
+}
+
+.my-report-edit-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.my-report-edit-form label {
+  color: #624887;
+  font-weight: 600;
+}
+
+.my-report-edit-form input,
+.my-report-edit-form select,
+.my-report-edit-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  border: 1px solid #ded0f2;
+  border-radius: 12px;
+  background: #fffaff;
+  color: #493568;
+  font: inherit;
+}
+
+.my-report-edit-form input:focus,
+.my-report-edit-form select:focus,
+.my-report-edit-form textarea:focus {
+  outline: 2px solid #c5a9f3;
+  border-color: #a989e5;
+}
+
+.my-report-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.my-reports-message {
+  padding: 13px 16px;
+  margin: 16px 0 22px;
+  border-radius: 14px;
+  font-weight: 600;
+}
+
+.my-reports-message.success {
+  color: #247653;
+  background: #e5f7ec;
+  border: 1px solid #bde7ce;
+}
+
+.my-reports-message.error {
+  color: #ad3454;
+  background: #fff0f3;
+  border: 1px solid #f3c8d3;
+}
+
+.my-reports-empty {
+  padding: 22px;
+  border-radius: 18px;
+  background: #f7f0ff;
+  color: #73559b;
+}
+
+@media (max-width: 600px) {
+  .my-reports-page {
+    padding: 14px;
+  }
+
+  .my-report-card {
+    padding: 17px;
+    border-radius: 19px;
+  }
+
+  .my-report-edit-form {
+    padding: 17px;
+  }
+
+  .my-report-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .my-report-actions button {
+    width: 100%;
+  }
+}
