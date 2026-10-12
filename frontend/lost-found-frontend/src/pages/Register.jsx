@@ -14,7 +14,7 @@ function Register() {
   async function handleSubmit(e) {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8080/api/auth/register", form);
+      await axios.post("https://campus-lost-found-backend-4iei.onrender.com/api/auth/register", form);
       setMessage("Registration successful");
       setTimeout(() => navigate("/login"), 1000);
     } catch (error) {

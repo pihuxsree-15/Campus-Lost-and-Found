@@ -12,7 +12,7 @@ function Login() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/auth/login",
+        "https://campus-lost-found-backend-4iei.onrender.com/api/auth/login",
         { email, password }
       );
       localStorage.setItem("user", JSON.stringify(response.data));

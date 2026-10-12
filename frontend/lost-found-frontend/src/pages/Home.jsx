@@ -10,7 +10,7 @@ function Home() {
   async function loadItems() {
     try {
       const response = await axios.get(
-        "http://localhost:8080/api/items/search",
+        "https://campus-lost-found-backend-4iei.onrender.com/api/items/search",
         {
           params: { category, location }
         }

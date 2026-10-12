@@ -15,7 +15,7 @@ function Notifications() {
     }
 
     axios
-      .get(`http://localhost:8080/api/notifications/user/${user.userId}`)
+      .get(`https://campus-lost-found-backend-4iei.onrender.com/api/notifications/user/${user.userId}`)
       .then((response) => setNotifications(response.data))
       .catch(() => setError("Unable to load notifications."));
   }, [user?.userId]);
@@ -23,7 +23,7 @@ function Notifications() {
   const markAsRead = async (notificationId) => {
     try {
       await axios.put(
-        `http://localhost:8080/api/notifications/${notificationId}/read/user/${user.userId}`
+        `https://campus-lost-found-backend-4iei.onrender.com/api/notifications/${notificationId}/read/user/${user.userId}`
       );
 
       setNotifications((current) =>

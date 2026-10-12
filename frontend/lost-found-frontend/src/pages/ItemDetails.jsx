@@ -20,7 +20,7 @@ function ItemDetails() {
     async function fetchItem() {
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/items/${id}`
+          `https://campus-lost-found-backend-4iei.onrender.com/api/items/${id}`
         );
         setItem(response.data);
       } catch (err) {
@@ -40,7 +40,7 @@ function ItemDetails() {
     setSubmitting(true);
 
     try {
-      await axios.post("http://localhost:8080/api/claims", {
+      await axios.post("https://campus-lost-found-backend-4iei.onrender.com/api/claims", {
         itemId: Number(id),
         claimantId: user.userId,
         description,

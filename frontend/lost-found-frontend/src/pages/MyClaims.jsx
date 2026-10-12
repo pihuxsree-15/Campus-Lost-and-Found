@@ -14,7 +14,7 @@ function MyClaims() {
     }
 
     axios
-      .get(`http://localhost:8080/api/claims/my/${user.userId}`)
+      .get(`https://campus-lost-found-backend-4iei.onrender.com/api/claims/my/${user.userId}`)
       .then((response) => setClaims(response.data))
       .catch(() => setError("Could not load your claims."));
   }, [user?.userId]);

@@ -10,7 +10,7 @@ function Admin() {
   async function loadItems() {
     try {
       const response = await axios.get(
-        "http://localhost:8080/api/items"
+        "https://campus-lost-found-backend-4iei.onrender.com/api/items"
       );
       setItems(response.data);
     } catch (error) {
@@ -21,7 +21,7 @@ function Admin() {
   async function loadClaims() {
     try {
       const response = await axios.get(
-        "http://localhost:8080/api/claims/admin"
+        "https://campus-lost-found-backend-4iei.onrender.com/api/claims/admin"
       );
       setClaims(response.data);
       setError("");
@@ -36,7 +36,7 @@ function Admin() {
 
     try {
       await axios.put(
-        `http://localhost:8080/api/items/${id}`,
+        `https://campus-lost-found-backend-4iei.onrender.com/api/items/${id}`,
         { ...item, status }
       );
       loadItems();
@@ -51,7 +51,7 @@ function Admin() {
     }
 
     try {
-      await axios.delete(`http://localhost:8080/api/items/${id}`);
+      await axios.delete(`https://campus-lost-found-backend-4iei.onrender.com/api/items/${id}`);
       loadItems();
     } catch (error) {
       alert("Delete failed");
@@ -61,7 +61,7 @@ function Admin() {
   async function reviewClaim(claimId, decision) {
     try {
       await axios.put(
-        `http://localhost:8080/api/claims/${claimId}/review`,
+        `https://campus-lost-found-backend-4iei.onrender.com/api/claims/${claimId}/review`,
         { decision }
       );
 
@@ -75,7 +75,7 @@ function Admin() {
   async function markReturned(itemId) {
     try {
       await axios.put(
-        `http://localhost:8080/api/claims/item/${itemId}/returned`
+        `https://campus-lost-found-backend-4iei.onrender.com/api/claims/item/${itemId}/returned`
       );
       await loadItems();
       alert("Item marked as returned.");

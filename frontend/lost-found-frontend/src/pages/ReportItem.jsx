@@ -47,7 +47,7 @@ function ReportItem() {
         data.append("file", file);
 
         const uploadResponse = await axios.post(
-          "http://localhost:8080/api/items/upload",
+          "https://campus-lost-found-backend-4iei.onrender.com/api/items/upload",
           data
         );
 
@@ -55,7 +55,7 @@ function ReportItem() {
         mediaType = uploadResponse.data.mediaType;
       }
 
-      await axios.post("http://localhost:8080/api/items", {
+      await axios.post("https://campus-lost-found-backend-4iei.onrender.com/api/items", {
         ...form,
         mediaUrl,
         mediaType

@@ -16,7 +16,7 @@ function Navbar() {
 
     axios
       .get(
-        `http://localhost:8080/api/notifications/user/${user.userId}/unread-count`
+        `https://campus-lost-found-backend-4iei.onrender.com/api/notifications/user/${user.userId}/unread-count`
       )
       .then((response) => setUnreadCount(response.data.count))
       .catch(() => setUnreadCount(0));

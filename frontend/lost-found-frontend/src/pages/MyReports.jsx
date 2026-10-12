@@ -5,7 +5,7 @@ import { QRCodeCanvas } from "qrcode.react";
 import ItemCard from "../components/ItemCard";
 import "./MyReports.css";
 
-const API = "http://localhost:8080/api";
+const API = "https://campus-lost-found-backend-4iei.onrender.com/api";
 
 function MyReports() {
   const user = JSON.parse(localStorage.getItem("user") || "null");
